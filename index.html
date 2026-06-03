@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>J & H</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Lato', sans-serif;
+      background: #6b1226;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: #7a1528;
+      border: 1.5px solid rgba(220, 210, 190, 0.5);
+      border-radius: 4px;
+      padding: 44px 40px;
+      max-width: 460px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.4), inset 0 0 60px rgba(0,0,0,0.15);
+      position: relative;
+    }
+    /* decorative corner border */
+    .card::before {
+      content: '';
+      position: absolute;
+      inset: 10px;
+      border: 1px solid rgba(220, 210, 190, 0.25);
+      border-radius: 2px;
+      pointer-events: none;
+    }
+    .swan {
+      font-size: 42px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      color: #e8dfc8;
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+    .date {
+      font-family: 'Lato', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 3px;
+      color: rgba(220, 210, 190, 0.6);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    p.subtitle {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      color: rgba(220, 210, 190, 0.75);
+      margin-bottom: 28px;
+      font-size: 1rem;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid rgba(220, 210, 190, 0.3);
+      margin: 0 0 24px;
+    }
+    .details { text-align: left; }
+    .row {
+      display: flex;
+      justify-content: space-between;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(220, 210, 190, 0.15);
+    }
+    .row:last-child { border-bottom: none; }
+    .label {
+      color: rgba(220, 210, 190, 0.55);
+      font-size: 0.78rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .value {
+      font-weight: 400;
+      color: #e8dfc8;
+      font-size: 0.92rem;
+      letter-spacing: 0.5px;
+    }
+    .note {
+      margin-top: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 0.9rem;
+      color: rgba(220, 210, 190, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="swan">🦢</div>
+    <h1>J & H</h1>
+    <div class="date">March 3, 2026</div>
+    <p class="subtitle">Can't bring a present? Send your gift via bank transfer.</p>
+    <hr class="divider"/>
+    <div class="details">
+      <div class="row">
+        <span class="label">Bank</span>
+        <span class="value">Commercial Bank</span>
+      </div>
+      <div class="row">
+        <span class="label">Account Name</span>
+        <span class="value">W. E S Fernando</span>
+      </div>
+      <div class="row">
+        <span class="label">Account Number</span>
+        <span class="value">8009528228</span>
+      </div>
+      <div class="row">
+        <span class="label">Branch</span>
+        <span class="value">Seeduwa Commercial</span>
+      </div>
+    </div>
+    <p class="note">Please include your name as the reference so we know who the gift is from.</p>
+  </div>
+</body>
+</html>

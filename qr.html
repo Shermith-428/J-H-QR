@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Support Our Cause - QR Code</title>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 40px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    h1 { font-size: 1.4rem; color: #1a1a2e; margin-bottom: 6px; }
+    p { color: #888; font-size: 0.9rem; margin-bottom: 24px; }
+    #qrcode { display: inline-block; }
+    .url { margin-top: 16px; font-size: 0.8rem; color: #aaa; word-break: break-all; max-width: 280px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>J & H ❤️</h1>
+    <p>Scan to view bank details for transferring your gift</p>
+    <div id="qrcode"></div>
+    <div class="url" id="urlLabel"></div>
+  </div>
+
+  <script>
+    // Replace this URL with the hosted URL of your donation.html
+    const donationURL = "https://shermith-428.github.io/J-H-QR/";
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: donationURL,
+      width: 256,
+      height: 256,
+      colorDark: "#1a1a2e",
+      colorLight: "#ffffff",
+    });
+
+    document.getElementById("urlLabel").textContent = donationURL;
+  </script>
+</body>
+</html>
